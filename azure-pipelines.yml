@@ -23,6 +23,10 @@ steps:
 - task: Docker@2
   inputs:
     containerRegistry: 'Docker connection'
-    repository: 'shivanandsagar4/azuredevops1'
+    command: 'login'
+- task: Docker@2
+  inputs:
+    containerRegistry: 'Docker connection'
+    repository: 'sudhashiva / repos1'
     command: 'buildAndPush'
     Dockerfile: '**/AzureDockerfile'
